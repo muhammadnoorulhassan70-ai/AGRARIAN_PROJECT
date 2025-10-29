@@ -12,7 +12,8 @@ from sklearn.pipeline import Pipeline
 app = Flask(__name__)
 
 # ✅ OpenRouter API Key (for DeepSeek routing)
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+
 
 # Load dataset
 df = pd.read_csv("crop_yield_dataset.csv")
